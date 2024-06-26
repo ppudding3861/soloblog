@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/editpage.css}" />
+</head>
+<body>
+    <div class="totalcontainer">
+    <header>
+        <div th:replace="~{fragments/header :: header}"></div>
+    </header>
+    <div class="index">
+    <sidebar>
+        <div th:replace="~{fragments/sidebar :: sidebar}"></div>
+    </sidebar>
+        <div class="index2">
+        <navbar>
+            <div th:replace="~{fragments/navbar :: navbar}"></div>
+        </navbar>
+        <main>
+            <div th:replace="~{fragments/editpage :: editpage}"></div>
+        </main>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
